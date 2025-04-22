@@ -49,6 +49,8 @@ void EcCiA402Drive::processData(size_t index, uint8_t * domain_address)
         pdo_channels_info_[index].default_value = transition(
           state_,
           pdo_channels_info_[index].ec_read(domain_address));
+          // std::cout << "Sending control_word: " <<  pdo_channels_info_[index].default_value << std::endl;
+          // std::flush(std::cout);
       }
     }
   }
@@ -85,6 +87,8 @@ void EcCiA402Drive::processData(size_t index, uint8_t * domain_address)
   // Special case: StatusWord
   if (pdo_channels_info_[index].index == CiA402D_TPDO_STATUSWORD) {
     status_word_ = pdo_channels_info_[index].last_value;
+    // std::cout << "Getting status_word: " <<  status_word_ << std::endl;
+    // std::flush(std::cout);
   }
 
 
