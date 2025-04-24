@@ -388,13 +388,13 @@ hardware_interface::return_type EthercatDriver::write(
   const rclcpp::Time & /*time*/,
   const rclcpp::Duration & /*period*/)
 {
-  RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "hw_joint_commands_.size() = %d", hw_joint_commands_.size());
-  for(const auto& val_list:hw_joint_commands_){
-    RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "val_list.size() = %d", val_list.size());
-    for(const auto& val:val_list){
-      RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "   val = %f", val);
-    }
-  }
+  // RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "hw_joint_commands_.size() = %d", hw_joint_commands_.size());
+  // for(const auto& val_list:hw_joint_commands_){
+  //   RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "val_list.size() = %d", val_list.size());
+  //   for(const auto& val:val_list){
+  //     RCLCPP_INFO(rclcpp::get_logger("EthercatDriver"), "   val = %f", val);
+  //   }
+  // }
   // try to lock so we can avoid blocking the read/write loop on the lock.
   const std::unique_lock<std::mutex> lock(ec_mutex_, std::try_to_lock);
   if (lock.owns_lock() && activated_) {
