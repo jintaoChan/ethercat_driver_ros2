@@ -1,0 +1,5 @@
+<library path="ethercat_multi_axis_drive">
+  <class name="ethercat_generic_plugins/ECMutilAxisDrive" type="ethercat_generic_plugins::ECMutilAxisDrive" base_class_type="ethercat_interface::EcSlave">
+    <description>Generic EtherCAT CiA402 Drive.</description>
+  </class>
+</library>
