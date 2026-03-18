@@ -1,0 +1,5 @@
+<library path="ethercat_mirror_io">
+  <class name="ethercat_generic_plugins/MirrorIO" type="ethercat_generic_plugins::MirrorIO" base_class_type="ethercat_interface::EcSlave">
+    <description>Simulate state interface for output module which cannot read back status.</description>
+  </class>
+</library>

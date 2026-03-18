@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>ethercat_multi_axis_drive</name>
+  <name>ethercat_mirror_io</name>
   <version>1.2.0</version>
-  <description>Plugin implementations of drives control multiple motors.</description>
+  <description>Plugin implementations of io output modules which cannot read back state</description>
   <maintainer email="mcbed.robotics@gamil.com">Maciej Bednarczyk</maintainer>
   <license>Apache-2.0</license>
 

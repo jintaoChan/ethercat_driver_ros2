@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ethercat_multi_axis_drive)
+project(ethercat_mirror_io)
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
@@ -16,6 +16,7 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
 find_package(ethercat_interface REQUIRED)
 find_package(ethercat_generic_slave REQUIRED)
+find_package(ethercat_generic_cia402_drive REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(yaml_cpp_vendor REQUIRED)
 find_package(yaml-cpp REQUIRED)
@@ -30,12 +31,13 @@ ament_target_dependencies(
   ${PROJECT_NAME}
   ethercat_interface
   ethercat_generic_slave
+  ethercat_generic_cia402_drive
   pluginlib
   yaml_cpp_vendor
   yaml-cpp
 )
 target_link_libraries(${PROJECT_NAME}
- yaml-cpp
+  yaml-cpp
 )
 
 pluginlib_export_plugin_description_file(ethercat_interface ethercat_plugins.xml)
